@@ -26,7 +26,7 @@ function getRandomInteger(min, max) {
  * @param {*} max valore massimo
  * @returns array di 5 numeri casuali diversi tra loro
  */
-function generate5NumberRandom(min, max, ammount) {
+function generateArrayNumberRandom(min, max, ammount) {
     const listNumberRandom = [];
 
     while (listNumberRandom.length !== ammount) {
@@ -38,3 +38,45 @@ function generate5NumberRandom(min, max, ammount) {
     return listNumberRandom;
 }
 //console.log(generate5NumberRandom(1, 10, 5));
+
+
+// Attivare un timer di 30 secondi
+let timer = setInterval(timerCounter, 1000);
+let counter = 3;
+
+/** timer di 30 secondi
+ */
+function timerCounter() {
+    document.getElementById("timer").value = counter;
+    counter--;
+    if (counter == 0) {
+        clearInterval(timer);
+    }
+}
+
+setTimeout(hideNumbers, 3500);
+
+
+function hideNumbers() {
+    document.querySelector('.numberMemory').classList.add('d_none');
+    document.getElementById('timer').classList.add('d_none');
+}
+
+setTimeout(showPrompt, 3600);
+
+
+function showPrompt() {
+    for (let i = 0; i < 3; i++) {
+        let numerii = prompt('scegliiiiiii');
+        if (numerii == '1' || numerii == '2') {
+            numerii;
+        } else {
+            alert('hai perso')
+        }
+        alert('hai vinto')
+    }
+}
+
+//console.log(timerNumber(0, 10));
+
+//console.log(timerNumber(0, 10));

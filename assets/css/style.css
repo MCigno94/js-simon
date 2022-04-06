@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 50vw;
+    height: 50vh;
+    margin: 25vh auto;
+    background-color: cornflowerblue;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20vh;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.d_none {
+    display: none;
+}
