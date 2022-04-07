@@ -29,6 +29,7 @@ function generateElement(element, num) {
         domElement.append(numberElement);
         memoryNumberElement.append(domElement);
     }
+    return listNumber;
 }
 generateElement('span', 5)
 
@@ -65,27 +66,25 @@ function timerCounter() {
     }
 }
 
-/* setTimeout(hideNumbers, 5500);
+setTimeout(hideNumbers, 5500);
 
 
 function hideNumbers() {
     document.querySelector('.numberMemory').classList.add('d_none');
     document.getElementById('timer').classList.add('d_none');
-} */
+}
 
-//setTimeout(showPrompt, 3600);
+setTimeout(showPrompt, 5600);
 
-
-/* function showPrompt() {
-    for (let i = 0; i < 3; i++) {
-         let numerii = prompt('scegliiiiiii');
-        if (numerii == '1' || numerii == '2') {
-            numerii;
-        } else {
-              alert('hai perso')
-        }
-          alert('hai vinto')
+// array di numeri creati dall'utente
+function showPrompt() {
+    const listNumberUser = [];
+    for (let i = 0; i < 5; i++) {
+        let numberUser = prompt('Inserisci i numeri che hai visualizzato');
+        listNumberUser.push(numberUser);
     }
-} */
+    return listNumberUser;
+}
+
 
 //console.log(timerNumber(0, 10));
