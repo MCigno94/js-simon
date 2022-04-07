@@ -20,6 +20,17 @@ function getRandomInteger(min, max) {
 }
 //console.log(getRandomInteger(1, 10));
 
+function generateElement(element, num) {
+    const memoryNumberElement = document.querySelector('.numberMemory');
+    const listNumber = generateArrayNumberRandom(1, 100, num);
+    for (let i = 0; i < listNumber.length; i++) {
+        const numberElement = listNumber[i];
+        const domElement = document.createElement(element);
+        domElement.append(numberElement);
+        memoryNumberElement.append(domElement);
+    }
+}
+generateElement('span', 5)
 
 /** genero un array di numeri casuali di una lunghezza pari a 'ammount' (nel mio caso 5) in un intervallo specifico ==> da 'min' a 'max' <==
  * @param {*} min valore minimo
@@ -37,12 +48,12 @@ function generateArrayNumberRandom(min, max, ammount) {
     }
     return listNumberRandom;
 }
-//console.log(generate5NumberRandom(1, 10, 5));
+//console.log(generateNumberRandom(1, 10, 5));
 
 
 // Attivare un timer di 30 secondi
 let timer = setInterval(timerCounter, 1000);
-let counter = 3;
+let counter = 5;
 
 /** timer di 30 secondi
  */
@@ -54,29 +65,27 @@ function timerCounter() {
     }
 }
 
-setTimeout(hideNumbers, 3500);
+/* setTimeout(hideNumbers, 5500);
 
 
 function hideNumbers() {
     document.querySelector('.numberMemory').classList.add('d_none');
     document.getElementById('timer').classList.add('d_none');
-}
+} */
 
-setTimeout(showPrompt, 3600);
+//setTimeout(showPrompt, 3600);
 
 
-function showPrompt() {
+/* function showPrompt() {
     for (let i = 0; i < 3; i++) {
-        let numerii = prompt('scegliiiiiii');
+         let numerii = prompt('scegliiiiiii');
         if (numerii == '1' || numerii == '2') {
             numerii;
         } else {
-            alert('hai perso')
+              alert('hai perso')
         }
-        alert('hai vinto')
+          alert('hai vinto')
     }
-}
-
-//console.log(timerNumber(0, 10));
+} */
 
 //console.log(timerNumber(0, 10));

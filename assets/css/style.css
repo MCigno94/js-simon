@@ -28,3 +28,7 @@ input {
 .d_none {
     display: none;
 }
+
+span {
+    padding: 1rem;
+}
