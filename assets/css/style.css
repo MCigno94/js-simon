@@ -14,14 +14,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20vh;
+    gap: 10vh;
 }
 
 input {
     background-color: transparent;
     border: none;
     text-align: center;
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 
@@ -30,5 +30,7 @@ input {
 }
 
 span {
+    border-right: 1px solid black;
+    font-size: 3rem;
     padding: 1rem;
 }
