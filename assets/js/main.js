@@ -31,7 +31,7 @@ function generateElement(element, num) {
     }
     return listNumber;
 }
-generateElement('span', 5)
+const listVisibleNumber = generateElement('span', 5);
 
 /** genero un array di numeri casuali di una lunghezza pari a 'ammount' (nel mio caso 5) in un intervallo specifico ==> da 'min' a 'max' <==
  * @param {*} min valore minimo
@@ -74,17 +74,20 @@ function hideNumbers() {
     document.getElementById('timer').classList.add('d_none');
 }
 
-setTimeout(showPrompt, 5600);
+setTimeout(showPrompt, 5600, 5);
 
 // array di numeri creati dall'utente
-function showPrompt() {
+function showPrompt(num) {
     const listNumberUser = [];
-    for (let i = 0; i < 5; i++) {
-        let numberUser = prompt('Inserisci i numeri che hai visualizzato');
-        listNumberUser.push(numberUser);
+    for (let i = 0; i < num; i++) {
+        let numberUser = Number(prompt('Inserisci i numeri che hai visualizzato'));
+        if (!listNumberUser.includes(numberUser) && listVisibleNumber.includes(numberUser)) {
+            listNumberUser.push(numberUser);
+        }
     }
-    return listNumberUser;
-}
 
+    return alert(`Hai indovinato ${listNumberUser.length}/${listVisibleNumber.length
+    } - I numeri indovinati sono ${listNumberUser}`);
+}
 
 //console.log(timerNumber(0, 10));
